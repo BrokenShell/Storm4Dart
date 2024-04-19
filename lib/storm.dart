@@ -4,7 +4,7 @@ import 'package:ffi/ffi.dart' as ffi;
 
 final storm = ffi.DynamicLibrary.open("${Directory.current.path}/lib/storm.so");
 
-// Storm Version
+// Utility Functions
 String version() {
   final getVersion = storm.lookupFunction<
       ffi.Pointer<ffi.Utf8> Function(),
@@ -12,7 +12,6 @@ String version() {
   return getVersion().cast<ffi.Utf8>().toDartString();
 }
 
-// Utility Functions
 final minInt = storm.lookupFunction<
     ffi.Int64 Function(),
     int Function()>("min_int");
