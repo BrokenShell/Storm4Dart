@@ -1,7 +1,7 @@
 import 'package:storm/storm.dart' as storm;
 
 void main(List<String> arguments) {
-  // Utilities
+  print("Utility Functions:");
   print("Storm Version: ${storm.version()}");
   print("Min Int: ${storm.minInt()}");
   print("Max Int: ${storm.maxInt()}");
@@ -10,7 +10,7 @@ void main(List<String> arguments) {
   print("Min Below: ${storm.minBelow()}");
   print("Min Above: ${storm.minAbove()}");
 
-  // Random Floats
+  print("\nRandom Floats Functions:");
   print("Canonical: ${storm.canonical()}");
   print("Uniform (0, 1): ${storm.uniform(0.0, 1.0)}");
   print("Exponential (Rate=1.0): ${storm.exponential(1.0)}");
@@ -28,11 +28,11 @@ void main(List<String> arguments) {
   print("Von Mises (Mu=0.0, Kappa=1.0): ${storm.vonmises(0.0, 1.0)}");
   print("Triangular (Low=0.0, High=1.0, Mode=0.5): ${storm.triangular(0.0, 1.0, 0.5)}");
 
-  // Random Boolean
+  print("\nRandom Boolean Functions:");
   print("Bernoulli (P=0.75): ${storm.bernoulli(0.75)}");
   print("Percent True (25.0): ${storm.percentTrue(25.0)}");
 
-  // Random Integer
+  print("\nRandom Integer Functions:");
   print("Uniform Int Variate (-50, 50): ${storm.uniformInt(-50, 50)}");
   print("Binomial Variate (10 trials, p=0.5): ${storm.binomial(10, 0.5)}");
   print("Negative Binomial Variate (5 trials, p=0.3): ${storm.negativeBinomial(5, 0.3)}");
@@ -44,12 +44,12 @@ void main(List<String> arguments) {
   print("Plus or Minus Linear (20): ${storm.plusOrMinusLinear(20)}");
   print("Plus or Minus Gauss (30): ${storm.plusOrMinusGauss(30)}");
 
-  // Random Dice
+  print("\nRandom Dice Functions:");
   print("Roll a D20: ${storm.d(20)}");
   print("Roll three six-sided dice: ${storm.dice(3, 6)}");
   print("Roll 4d6, take top three: ${storm.abilityDice(4)}");
 
-  // Random Index
+  print("\nRandom Index Functions:");
   print("Random Index (10): ${storm.randomIndex(10)}");
   print("Front Linear (10): ${storm.frontLinear(10)}");
   print("Back Linear (10): ${storm.backLinear(10)}");
