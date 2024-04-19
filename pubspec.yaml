@@ -1,15 +1,13 @@
 name: storm
 description: A sample command-line application.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/BrokenShell/Storm4Dart
 
 environment:
   sdk: ^3.3.4
 
-# Add regular dependencies here.
 dependencies:
-  ffi: ^1.0.0
-
+  ffi: ^2.0.0
 
 dev_dependencies:
   lints: ^3.0.0
