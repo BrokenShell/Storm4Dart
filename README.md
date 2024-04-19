@@ -1,2 +1,4 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Storm4Dart
+## High Performance Random Engine Utility
+- Dart wrapper for C++ library "Storm"
+- Storm Documentation: https://github.com/BrokenShell/Storm
