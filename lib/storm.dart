@@ -1,6 +1,6 @@
+import 'dart:io';
 import 'dart:ffi' as ffi;
 import 'package:ffi/ffi.dart' as ffi;
-import 'dart:io';
 
 final storm = ffi.DynamicLibrary.open("${Directory.current.path}/lib/storm.so");
 
