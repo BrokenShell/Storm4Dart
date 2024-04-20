@@ -1,8 +1,10 @@
 import 'package:storm/storm.dart' as storm;
 
 void main(List<String> arguments) {
-  print("Utility Functions:");
-  print("Storm Version: ${storm.version()}");
+  print("Storm4Dart");
+  print("Core Engine Version: ${storm.version()}");
+
+  print("\nUtility Functions:");
   print("Min Int: ${storm.minInt()}");
   print("Max Int: ${storm.maxInt()}");
   print("Min Float: ${storm.minFloat()}");
@@ -10,7 +12,7 @@ void main(List<String> arguments) {
   print("Min Below: ${storm.minBelow()}");
   print("Min Above: ${storm.minAbove()}");
 
-  print("\nRandom Floats Functions:");
+  print("\nRandom Float Functions:");
   print("Canonical: ${storm.canonical()}");
   print("Uniform (0, 1): ${storm.uniform(0.0, 1.0)}");
   print("Exponential (Rate=1.0): ${storm.exponential(1.0)}");
