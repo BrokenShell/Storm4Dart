@@ -1,8 +1,8 @@
 import 'package:storm/storm.dart' as storm;
 
 void main(List<String> arguments) {
-  print("Storm4Dart");
-  print("Core Engine Version: ${storm.version()}");
+  print("Storm4Dart v0.0.1 alpha");
+  print("Storm Engine: ${storm.version()}");
 
   print("\nUtility Functions:");
   print("Min Int: ${storm.minInt()}");

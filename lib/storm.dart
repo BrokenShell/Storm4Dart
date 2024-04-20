@@ -5,7 +5,6 @@ import 'package:ffi/ffi.dart' as ffi;
 final storm = ffi.DynamicLibrary.open("${Directory.current.path}/lib/storm.so");
 
 typedef CppStrGen = ffi.Pointer<ffi.Utf8> Function();
-
 typedef CppDoubleGenerator = ffi.Double Function();
 typedef DoubleGenerator = double Function();
 typedef CppDoubleTransformer = ffi.Double Function(ffi.Double);
@@ -14,7 +13,6 @@ typedef CppDoubleTransducer = ffi.Double Function(ffi.Double, ffi.Double);
 typedef DoubleTransducer = double Function(double, double);
 typedef CppDoubleTriplex = ffi.Double Function(ffi.Double, ffi.Double, ffi.Double);
 typedef DoubleTriplex = double Function(double, double, double);
-
 typedef CppIntGenerator = ffi.Int64 Function();
 typedef IntGenerator = int Function();
 typedef CppIntTransformer = ffi.Int64 Function(ffi.Int64);
@@ -23,20 +21,17 @@ typedef CppIntTransducer = ffi.Int64 Function(ffi.Int64, ffi.Int64);
 typedef IntTransducer = int Function(int, int);
 typedef CppIntTriplex = ffi.Int64 Function(ffi.Int64, ffi.Int64, ffi.Int64);
 typedef IntTriplex = int Function(int, int, int);
-
 typedef CppBoolGenerator = ffi.Bool Function(ffi.Double);
 typedef BoolGenerator = bool Function(double);
-
 typedef CppDoubleToInt = ffi.Int64 Function(ffi.Double);
 typedef DoubleToInt = int Function(double);
-
 typedef CppIntDoubleJunctionInt = ffi.Int64 Function(ffi.Int64, ffi.Double);
 typedef IntDoubleJunctionInt = int Function(int, double);
 
 // Utility Functions
 String version() {
   final getVersion = storm.lookupFunction<CppStrGen, CppStrGen>("get_version");
-  return getVersion().cast<ffi.Utf8>().toDartString();
+  return "v${getVersion().cast<ffi.Utf8>().toDartString()}";
 }
 
 final minInt = storm.lookupFunction<CppIntGenerator, IntGenerator>("min_int");
