@@ -1,5 +1,5 @@
-name: storm
-description: A sample command-line application.
+name: storm_4_dart
+description: Dart wrapper of Storm - RNG engine utility.
 version: 1.0.0
 repository: https://github.com/BrokenShell/Storm4Dart
 
