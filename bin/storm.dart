@@ -1,4 +1,4 @@
-import 'package:storm/storm.dart' as storm;
+import 'package:storm_4_dart/storm.dart' as storm;
 
 void main(List<String> arguments) {
   print("Storm4Dart v0.0.1 alpha");
