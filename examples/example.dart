@@ -1,8 +1,34 @@
 import 'package:storm_4_dart/storm.dart' as storm;
+import 'package:storm_4_dart/fortuna.dart' as fortuna;
 
-void main(List<String> arguments) {
-  print("Storm4Dart v0.0.1 alpha");
-  print("Storm Engine: ${storm.version()}");
+void main() {
+  print("Storm4Dart ${storm.version()}");
+  print("Storm CPP Engine: ${storm.stormVersion()}");
+
+  print("\nFortuna Classes:");
+  final someList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  print("someList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]");
+  final truffleShuffle = fortuna.TruffleShuffle<int>(someList);
+  print("truffleShuffle = fortuna.TruffleShuffle<int>(someList)");
+  print("truffleShuffle(): ${truffleShuffle()}");
+  final quantumMonty = fortuna.QuantumMonty<int>(someList);
+  print("quantumMonty = fortuna.QuantumMonty<int>(someList)");
+  print("quantumMonty(): ${quantumMonty.call()}");
+  print("quantumMonty.truffleShuffle(): ${quantumMonty.truffleShuffle.call()}");
+  print("quantumMonty.flatUniform(): ${quantumMonty.flatUniform()}");
+  print("quantumMonty.cycle(): ${quantumMonty.cycle()}");
+  print("quantumMonty.frontLinear(): ${quantumMonty.frontLinear()}");
+  print("quantumMonty.middleLinear(): ${quantumMonty.middleLinear()}");
+  print("quantumMonty.backLinear(): ${quantumMonty.backLinear()}");
+  print("quantumMonty.quantumLinear(): ${quantumMonty.quantumLinear()}");
+  print("quantumMonty.frontGauss(): ${quantumMonty.frontGauss()}");
+  print("quantumMonty.middleGauss(): ${quantumMonty.middleGauss()}");
+  print("quantumMonty.backGauss(): ${quantumMonty.backGauss()}");
+  print("quantumMonty.quantumGauss(): ${quantumMonty.quantumGauss()}");
+  print("quantumMonty.frontPoisson(): ${quantumMonty.frontPoisson()}");
+  print("quantumMonty.middlePoisson(): ${quantumMonty.middlePoisson()}");
+  print("quantumMonty.backPoisson(): ${quantumMonty.backPoisson()}");
+  print("quantumMonty.quantumPoisson(): ${quantumMonty.quantumPoisson()}");
 
   print("\nUtility Functions:");
   print("Min Int: ${storm.minInt()}");

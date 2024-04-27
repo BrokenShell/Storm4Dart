@@ -30,6 +30,10 @@ typedef IntDoubleJunctionInt = int Function(int, double);
 
 // Utility Functions
 String version() {
+  return "v0.0.1 alpha";
+}
+
+String stormVersion() {
   final getVersion = storm.lookupFunction<CppStrGen, CppStrGen>("get_version");
   return "v${getVersion().cast<ffi.Utf8>().toDartString()}";
 }
